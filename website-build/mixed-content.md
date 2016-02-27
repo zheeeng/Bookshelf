@@ -1,9 +1,9 @@
-## Mixed Content
+##Mixed Content
 *Origin Link: <https://developer.mozilla.org/en-US/docs/Security/MixedContent>*
 
 If the HTTPS page includes content retrieved through regular, cleartext HTTP, then the connection is only partially encrypted: the unencrypted content is accessible to sniffers and can be modified by man-in-the-middle attackers.
 
-### Types of Mixed Content
+###Types of Mixed Content
 
 1. **Mixed passive/display content**  
 	Mixed Passive/Display Content is content served over HTTP that is included in an HTTPS webpage. An attackers could replace resources(listed below) which served over HTTP to users . Attacker could also infer information about the user's activities by watching which images are served to the user through observing HTTP requests.
@@ -22,4 +22,3 @@ If the HTTPS page includes content retrieved through regular, cleartext HTTP, th
 	* `<object>` (data attribute)
 	
 The difference lies in the threat level of the worst case scenario if content is rewritten as part of a Man-In-The-Middle attack. In the case of passive content, the threat is low (webpage appears broken or with misleading content). In the case of active content, the threat can lead to phishing, sensitive data disclosure, redirection to malicious sites.
-
