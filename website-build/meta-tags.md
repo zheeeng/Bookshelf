@@ -67,12 +67,12 @@ Searchbox screenshot:
 
 Tell Google not to provide translation link of your site in search results.
 
-### google-site-verification
+###google-site-verification
 > &lt;meta name="google-site-verification" content="..." /&gt;
 
 You can use this tag on the top-level page of your site to verify ownership for Search Console. 
 
-### http-equiv
+###http-equiv
 > &lt;meta http-equiv="Content-Type" content="...; charset=..." /&gt;
 > &lt;meta charset="..." &gt;
 
