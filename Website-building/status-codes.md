@@ -1,4 +1,4 @@
-## Status Code Definitions.
+## Status Code Definitions
 *Origin Link: <https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>, <http://www.w3schools.com/tags/ref_httpmessages.asp>*
 
 Following part lists commonly used status codes. All codes info check at *<https://en.wikipedia.org/wiki/List_of_HTTP_status_codes>*
@@ -89,6 +89,6 @@ The action required may be carried out by the user agent without interaction wit
 | 504   | Gateway Timeout               | The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.
 | 505   | HTTP Version Not Supported    | The server does not support the HTTP protocol version used in the request
 
-* 503: Service unavaliable is a temporary condition which will be alleviated after some delay. If known, the length of the delay may be indicated in a Retry-After header. If no Retry-After is given, the client should handle the response as it would for a 500 response. **Note:** This status code does not imply that a server must use it when becoming overloaded. Some servers may wish to simply refuse the connection.
+* 503: Service unavailable is a temporary condition which will be alleviated after some delay. If known, the length of the delay may be indicated in a Retry-After header. If no Retry-After is given, the client should handle the response as it would for a 500 response. **Note:** This status code does not imply that a server must use it when becoming overloaded. Some servers may wish to simply refuse the connection.
 * 505: The response should contain an entity describing why that version is not supported and what other protocols are supported by that server.
 
