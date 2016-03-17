@@ -1,5 +1,5 @@
 ## Status Code Definitions
-*Origin Link: <https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>, <http://www.w3schools.com/tags/ref_httpmessages.asp>*
+*Origin Links: <https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>, <http://www.w3schools.com/tags/ref_httpmessages.asp>*
 
 Following part lists commonly used status codes. All codes info check at *<https://en.wikipedia.org/wiki/List_of_HTTP_status_codes>*
 
@@ -18,19 +18,19 @@ Following part lists commonly used status codes. All codes info check at *<https
 | 201   | Created                       | The request has been fulfilled, and a new resource is created.
 | 202   | Accepted                      | The request has been accepted for processing, but the processing has not been completed.
 | 203   | Non-Authoritative Information | The request has been successfully processed, but is returning information that may be from another source.
-| 204   | No Content                    | The request has been successfully processe, but is not returning any content.
+| 204   | No Content                    | The request has been successfully process, but is not returning any content.
 | 205   | Reset Content                 | The request has been successfully processed, but is not returning any content, and requires that the requester reset the document view.
 | 206   | Partial Content               | The server is delivering only part of the resource due to a range header sent by the client.
 
 * 201: The newly created resource can be referenced by the URI(s) returned in the entity of the response, with the most specific URI for the resource given by a Location header field. If the action cannot be carried out immediately, the server should respond with 202 (Accepted) response instead.
-* 203: Avaliable since HTTP/1.1
+* 203: Available since HTTP/1.1
 * 205:This response is primarily intended to allow input for actions to take place via user input, followed by a clearing of the form in which the input is given so that the user can easily initiate another input action. 
  
 ### Redirection 3xx
 
 The action required may be carried out by the user agent without interaction with the user if and only if the method used in the second request is GET or HEAD. A client should detect infinite redirection loops, since such loops generate network traffic for each redirection.
 
-**Note:** Content developers should be aware that there might be clients that implement maxium five redirections limitation.
+**Note:** Content developers should be aware that there might be clients that implement maximum five redirections limitation.
 
 | Code  | Message               | Description 
 |:-----:|:---------------------:|:------------
