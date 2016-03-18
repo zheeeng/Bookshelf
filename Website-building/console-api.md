@@ -1,5 +1,5 @@
 # Console API
-*Origin Link: <https://developer.chrome.com/devtools/docs/console-api>, <https://developer.chrome.com/devtools/docs/console>*
+*Origin Links: <https://developer.chrome.com/devtools/docs/console-api>, <https://developer.chrome.com/devtools/docs/console>, <https://developer.chrome.com/devtools/docs/commandline-api>*
 
 ## Console Format Specifier
 Format Specifier    | Description
@@ -14,7 +14,7 @@ Format Specifier    | Description
 ## Console API Reference
 
 * **console.log(object [, object, ...])**
-    The behavior of calling console.log is equivalent to calling console.dir on Javascript obejct(non-dom), or calling console.dirxml on HTML element(dom).
+    The behavior of calling console.log is equivalent to calling console.dir on Javascript object(non-DOM), or calling console.dirxml on HTML element(DOM).
 
 * **console.info(object [, object, ...])**
 * **console.debug(object [, object, ...])**
@@ -28,8 +28,8 @@ Format Specifier    | Description
 
 * **console.dirxml(object)**
     Prints an XML representation of the specified object.
-    * `%O` is a shortcut for dir.
-    * `%o` acts either as dir or dirxml depending on the object type (non-dom or dom)
+    * `%O` is a shortcut for `dir`.
+    * `%o` acts either as dir or `dirxml` depending on the object type (non-DOM or DOM)
 
 ---
 
@@ -111,4 +111,37 @@ Format Specifier    | Description
 **debugger**
 The global debugger function causes Chrome to stop program execution and start a debugging session at the line where it was called. 
 **Note:** The debugger command is not a method of the console object.
+
+## Command Line API Reference
+
+* **`$_`**
+    Returns the value of the most recently evaluated expression.
+
+* **`$0 - $4`**
+    Dev Tools remembers the last five DOM elements (or JavaScript heap objects) those are marked as from $0 to $4. that you've selected in the tab (or Profiles panel). It makes those objects available as `$0`, `$1`, `$2`, `$3`, and `$4`.
+
+* **`$(selector)`**
+    An alias for `document.querySelector()`.
+
+* **`$$(selector)`**
+    An alias for `document.querySelectorAll()`.
+
+* **`$x(path)`**
+    Returns an array of DOM elements that match the given XPath expression.
+
+* **copy(object)**
+    Copies a string representation of the specified object to the clipboard.
+
+* **debug(function)**
+* **undebug(function)**
+* **inspect(object/function)**
+* **getEventListeners(object)**
+* **keys(object)**
+* **values(object)**
+* **monitor(function)**   
+* **unmonitor(function)**
+* **monitorEvents(object[, events])**
+    You specify a single event or events array to the second parameter.You can also specify one of the available event "types", strings that map to predefined sets of events. More info check a table [here](web-events.html).
+
+* **unmonitorEvents(object[, events])**
 
