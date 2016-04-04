@@ -20,26 +20,18 @@ Format Specifier    | Description
 * **console.debug(object [, object, ...])**
 * **console.warn(object [, object, ...])**
 * **console.error(object [, object, ...])**
-
----
-
 * **console.dir(object)**
-    Prints a JavaScript representation of the specified object.
-
 * **console.dirxml(object)**
-    Prints an XML representation of the specified object.
-    * `%O` is a shortcut for `dir`.
-    * `%o` acts either as dir or `dirxml` depending on the object type (non-DOM or DOM)
 
 ---
-
 * **console.table(object[, object])**
 
-    > console.table([{a:1, b:2, c:3}, {a:"foo", b:false, c:undefined}]);
     > console.table([[1,2,3], [2,3,4]]);
-
-    The second parameter to table() is optional. You may define an array containing the property strings you wish to display.
+    > console.table([{a:1, b:2, c:3}, {a:"foo", b:false, d:undefined}]);
     
+    ![searchbox](../pictures/160404-console.png)
+    ![searchbox](../pictures/160404-console2.png)
+
     ```js
     function Person(firstName, lastName, age) {
         this.firstName = firstName;
@@ -53,31 +45,23 @@ Format Specifier    | Description
     family.son = new Person("Mike", "Doyle", 8);
     console.table(family, ["firstName", "lastName", "age"]);
     ```
+    ![searchbox](../pictures/160404-console3.png)
 
 ---
-
 * **console.group(object[, object, ...])**
 * **console.groupCollapsed(object[, object, ...])**
 * **console.groupEnd()**
 
 ---
-
 * **console.assert(expression, object)**
     If the specified expression is false, the message is written to the console along with a stack trace. Failing expressions are `false`, `0`, `null`, or `undefined`.
 
     > console.assert(false, "value of expression is false");
 
 ---
-
-* **console.clear()**
-
----
-
 * **console.count(label)**
 
     > console.count("Executed times:");
-
----
 
 * **console.time(label)**
 * **console.timeEnd(label)**
@@ -94,7 +78,6 @@ Format Specifier    | Description
 * **console.timeStamp([label])**
 
 ---
-
 * **console.profile([label])**
 * **console.profileEnd()**
 
@@ -107,7 +90,9 @@ Format Specifier    | Description
     Prints a stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. 
 
 ---
+* **console.clear()**
 
+---
 **debugger**
 The global debugger function causes Chrome to stop program execution and start a debugging session at the line where it was called. 
 **Note:** The debugger command is not a method of the console object.
