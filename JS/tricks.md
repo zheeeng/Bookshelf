@@ -8,4 +8,9 @@ function parseURL(url) {
 }
 ```
 
+# Get random color
+
+```js
+(~~(Math.random()*(1<<24))).toString(16)
+```
 
