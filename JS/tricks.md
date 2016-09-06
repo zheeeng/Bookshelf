@@ -14,3 +14,10 @@ function parseURL(url) {
 (~~(Math.random()*(1<<24))).toString(16)
 ```
 
+# Computed object property names and destructuring
+
+```js
+let key = "z"
+let { [key]: foo } = { z: "bar" }
+```
+
