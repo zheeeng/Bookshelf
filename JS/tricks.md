@@ -73,3 +73,29 @@ var style = window.getComputedStyle(element[, pseudoElt])
 var property = window.getComputedStyle(element[, pseudoElt]).getPropertyValue(property)
 ```
 
+# Add css rule into stylesheet
+
+```js
+function addCSSRule(sheet, selector, rules, index) {
+  if(sheet.insertRule) {
+    sheet.insertRule(selector + "{" + rules + "}", index)
+  }
+  else {
+    sheet.addRule(selector, rules, index)
+  }
+}
+```
+
+## CSSStyleSheet.insertRule
+
+**Syntax**
+
+```js
+stylesheet.insertRule(rule, index)
+```
+
+* rule is a DOMString containing the rule to be inserted
+* index is an unsigned int representing the position to insert at, where index-0 is first rule, and index-max(styleSheet.cssRules.length) is just after last rule and same as length of rule-list in spreadsheet.
+* Chrome: " [Warning-icon] Calling CSSStyleSheet.insertRule() with one argument is deprecated. Please pass the index argument as well"
+* Internet Explorer - pre v9: `addRule(selector, rule [, index])`
+
