@@ -99,3 +99,18 @@ stylesheet.insertRule(rule, index)
 * Chrome: " [Warning-icon] Calling CSSStyleSheet.insertRule() with one argument is deprecated. Please pass the index argument as well"
 * Internet Explorer - pre v9: `addRule(selector, rule [, index])`
 
+# Post error log
+
+```js
+window.addEventListener('error', function (e) {
+    var stack = e.error.stack
+    var message = e.error.toString()
+    if (stack) {
+        message += '\n' + stack
+    }
+    var xhr = new XMLHttpRequest()
+    xhr.open('POST', '/log', true)
+    xhr.send(message)
+})
+```
+
