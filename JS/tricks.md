@@ -66,3 +66,10 @@ var elementClasses = elementNodeReference.classList
 * toggle ( String )
 * contains( String )
 
+# Get pseudo element style
+
+```js
+var style = window.getComputedStyle(element[, pseudoElt])
+var property = window.getComputedStyle(element[, pseudoElt]).getPropertyValue(property)
+```
+
