@@ -49,3 +49,20 @@ function matchesSelector (el, selector) {
 }
 ```
 
+# Manipulate DOM classes
+The Element.classList is a read-only property which returns live DOMTokenList collection of the class attributes of the element.
+
+**Syntax**
+
+```js
+var elementClasses = elementNodeReference.classList
+```
+
+**Methods**
+
+* add( String [, String] )
+* remove( String [,String] )
+* item ( Number )
+* toggle ( String )
+* contains( String )
+
