@@ -114,3 +114,16 @@ window.addEventListener('error', function (e) {
 })
 ```
 
+# Constantize object
+
+```js
+function constantize (obj) {
+  Object.freeze(obj);
+  Object.keys(obj).forEach(function (key, value) {
+    if (typeof obj[key] === 'object') {
+      constantize(obj[key])
+    }
+  })
+}
+```
+
