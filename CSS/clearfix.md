@@ -1,7 +1,7 @@
 # .clearfix
 
 ```css
-.clearfix:after {
+.clearfix::after {
 	visibility: hidden;
 	display: block;
 	content: "";
