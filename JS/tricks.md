@@ -14,6 +14,14 @@ function parseURL (url) {
 (~~(Math.random()*(1<<24))).toString(16)
 ```
 
+# Get object type
+
+```js
+function getType (obj) {
+  return (({}).toString.call(obj).match(/\[object\ (\w+)\]/)[1]).toLowerCase()
+}
+```
+
 # Computed object property names and destructuring
 
 ```js
