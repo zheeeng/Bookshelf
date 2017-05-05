@@ -14,6 +14,14 @@ function parseURL (url) {
 (~~(Math.random()*(1<<24))).toString(16)
 ```
 
+# Flatten array
+
+```js
+function flatten () {
+  return [].concat.apply([], arguments)
+}
+```
+
 # Get object type
 
 ```js
