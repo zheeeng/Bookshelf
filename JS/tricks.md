@@ -28,6 +28,15 @@ function flatten () {
 var g = (function () {return this})()
 ```
 
+# Check if environment support 'use strict'
+<http://stackoverflow.com/questions/3277182/how-to-get-the-global-object-in-javascript>
+
+```
+function isStrictSupported () {
+  return (function () { 'use strict'; return this })()
+}
+```
+
 # Get object type
 
 ```js
