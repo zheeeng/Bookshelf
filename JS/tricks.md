@@ -22,6 +22,12 @@ function flatten () {
 }
 ```
 
+# Get global object under non-strict model
+
+```
+var g = (function () {return this})()
+```
+
 # Get object type
 
 ```js
