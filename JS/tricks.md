@@ -199,3 +199,13 @@ function copyProperties(target, source) {
 }
 ```
 
+# Mandatory paramter
+```
+function mandatory(paraName) {
+    throw new Error(`Missing parameter ${paraName}`)
+}
+function foo(mustBeProvided = mandatory('mustBeProvided')) {
+    return mustBeProvided
+}
+```
+
