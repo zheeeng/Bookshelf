@@ -128,3 +128,28 @@
 * 'design:paramtypes'
 * 'design:returntype'
 
+## Reflection Decorators
+
+### Obtaining type metadata
+
+    function logType(target : any, key : string) {
+      var t = Reflect.getMetadata("design:type", target, key);
+      console.log(`${key} type: ${t.name}`);
+    }
+
+### Obtaining paramtypes types
+
+    function logParamTypes(target : any, key : string) {
+      var types = Reflect.getMetadata("design:paramtypes", target, key);
+      var s = types.map(a => a.name).join();
+      console.log(`${key} param types: ${s}`);
+    }
+
+
+### Obtaining type of return value
+
+    function logType(target : any, key : string) {
+      var t = Reflect.getMetadata("design:returntype", target, key);
+      console.log(`${key} return type: ${t.name}`);
+    }
+
