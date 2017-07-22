@@ -122,13 +122,13 @@
       }
     }
 
-## Reflect metadata design keys
+## [Reflect metadata design keys](http://blog.wolksoftware.com/decorators-metadata-reflection-in-typescript-from-novice-to-expert-part-4#2-the-metadata-reflection-api_1)
 
 * 'design:type'
 * 'design:paramtypes'
 * 'design:returntype'
 
-## Reflection Decorators
+## [Reflection Decorators](http://blog.wolksoftware.com/decorators-metadata-reflection-in-typescript-from-novice-to-expert-part-4#2-the-metadata-reflection-api_1)
 
 ### Obtaining type metadata
 
