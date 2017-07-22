@@ -96,3 +96,11 @@
       }
     }
 
+## [Parameter Decorator](http://blog.wolksoftware.com/decorators-metadata-reflection-in-typescript-from-novice-to-expert-part-3#1-parameter-decorators_1)
+
+    function logParameter(target: any, key: string, index: number) {
+      var indices = Reflect.getMetadata(`log_${key}_parameters`, target, key) || [];
+      indices.push(index); 
+      Reflect.defineMetadata(`log_${key}_parameters`, indices, target, key);
+    }
+
