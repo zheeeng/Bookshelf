@@ -12,7 +12,7 @@
     function logClass(target: any) {
       // save a reference to the original constructor
       var original = target;
-    
+
       // a utility function to generate instances of a class
       function construct(constructor, args) {
         var c : any = function () {
@@ -21,29 +21,29 @@
         c.prototype = constructor.prototype;
         return new c();
       }
-    
+
       // the new constructor behaviour
       var f : any = function (...args) {
         console.log("New: " + original.name); 
         return construct(original, args);
       }
-    
+
       // copy prototype so intanceof operator still works
       f.prototype = original.prototype;
-    
+
       // return new constructor (will override original)
       return f;
     }
 
 ## [Method Decorator](http://blog.wolksoftware.com/decorators-metadata-reflection-in-typescript-from-novice-to-expert-part-3#1-parameter-decorators_1)
-    
+
     function logMethod(target: Function, key: string, descriptor: any) {
       var originalMethod = descriptor.value;
       descriptor.value = function (...args: any[]) {
-    
+
         var metadataKey = `__log_${key}_parameters`;
         var indices = target[metadataKey];
-    
+
         if (Array.isArray(indices)) { 
           for (var i = 0; i < args.length; i++) { 
             if (indices.indexOf(i) !== -1) { 
@@ -71,19 +71,19 @@
     function logProperty(target: any, key: string) {
       // property value
       var _val = this[key];
-    
+
       // property getter
       var getter = function () {
         console.log(`Get: ${key} => ${_val}`);
         return _val;
       };
-    
+
       // property setter
       var setter = function (newVal) {
         console.log(`Set: ${key} => ${newVal}`);
         _val = newVal;
       };
-    
+
       // Delete property.
       if (delete this[key]) {
         // Create new property with getter and setter
@@ -121,4 +121,10 @@
           throw new Error("Decorators are not valid here!");
       }
     }
+
+## Reflect metadata design keys
+
+* 'design:type'
+* 'design:paramtypes'
+* 'design:returntype'
 
