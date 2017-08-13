@@ -41,4 +41,8 @@ function merge(obj1,obj2){
 }
 ```
 
+## Make hash value
 
+```js
+const makeHash = str => str.split('').reduce((hash, char) => (hash << 5) - hash + char.charCodeAt(), 0)
+```
