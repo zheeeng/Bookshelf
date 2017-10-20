@@ -51,3 +51,16 @@ sample = Direction.North; // Okay
 sample = 'North'; // Okay
 sample = 'AnythingElse';
 ```
+
+## isLittleEndian
+
+```ts
+function isLittleEndian () {
+  const testValue = 0b00010000
+  const buffer = new ArrayBuffer(2)
+  const view = new DataView(buffer)
+  view.setInt16(0, 0b00010000, true)
+  const i16arr = new Int16Array(buffer)
+  return i16arr[0] === testValue
+}
+```
